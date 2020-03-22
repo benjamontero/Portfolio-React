@@ -4,12 +4,12 @@ import Presentation from './components/Presentation';
 import fondo1 from './assets/fondo1.png';
 import Introduction from './components/Introduction';
 import EducationContainer from './components/EducationContainer';
-import HabilityContainer from './components/HabilityContainer';
+import AbilityContainer from './components/AbilityContainer';
 import ProjectsContainer from './components/ProjectsContainer';
+import Footer from './components/Footer';
+import Effects from './components/Effects'
 
 import { firebaseApp } from './firebase';
-
-
 
 export default class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class App extends Component {
         intro: "",
         misEstudios: [],
         misHabilidades: [],
-        misProyectos:[],
+        misProyectos: [],
       }
     }
     // pasame una referencia al child user de la database de firebaseApp
@@ -54,15 +54,19 @@ export default class App extends Component {
 
       this.setState({ user: user });
     });
+
+
   }
+
   render() {
+
+
     const {
- 
 
     } = this.state
     const {
       name,
-      roll, 
+      roll,
       logoEducacion,
       logoHabilidad,
       logoTrabajo,
@@ -76,6 +80,7 @@ export default class App extends Component {
 
     return (
       <div className="">
+        <Effects />
         <Presentation
           name={name}
           roll={roll}
@@ -91,13 +96,15 @@ export default class App extends Component {
         <EducationContainer
           estudios={misEstudios} logoEducacion={logoEducacion}
         />
-        <HabilityContainer
+        <AbilityContainer
           habilidades={misHabilidades} logoHabilidad={logoHabilidad}
         />
         <ProjectsContainer
-        proyectos = {misProyectos} logoTrabajo={logoTrabajo}
+          proyectos={misProyectos} logoTrabajo={logoTrabajo}
         />
-
+        <Footer
+          name={name}
+        />
       </div>
     );
   }

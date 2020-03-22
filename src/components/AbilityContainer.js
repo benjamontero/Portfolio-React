@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Hability from "./Hability"
+import Ability from "./Ability"
 
-export default class HabilityContainer extends Component {
+export default class AbilityContainer extends Component {
 
     render() {
         const { habilidades, logoHabilidad } = this.props;
@@ -12,8 +12,8 @@ export default class HabilityContainer extends Component {
                     <h1 className=" text-5xl font-medium font-mono ">Habilidades</h1>
 
                 </div>
-                <div className="grid grid-cols-3 gap-4 mt-10 ">
-                    {habilidades.map(habilidad => <Hability info={habilidad} key={habilidad.nombre} />)}
+                <div className="grid grid-cols-3  mt-10 ">
+                    {habilidades.map(habilidad => <Ability info={habilidad} key={habilidad.nombre} />)}
                 </div>
             </div>
         )
