@@ -5,15 +5,16 @@ import fondo1 from './assets/fondo1.png';
 import Introduction from './components/Introduction';
 import EducationContainer from './components/EducationContainer';
 import HabilityContainer from './components/HabilityContainer';
+import ProjectsContainer from './components/ProjectsContainer';
 
 import { firebaseApp } from './firebase';
+
 
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //contenido componente Presentation
       user: {
         name: "",
         roll: "",
@@ -24,6 +25,7 @@ export default class App extends Component {
         intro: "",
         misEstudios: [],
         misHabilidades: [],
+        misProyectos:[],
       }
     }
     // pasame una referencia al child user de la database de firebaseApp
@@ -46,6 +48,7 @@ export default class App extends Component {
         intro: snap.val().intro,
         misEstudios: snap.val().misEstudios,
         misHabilidades: snap.val().misHabilidades,
+        misProyectos: snap.val().misProyectos,
         _key: snap.key
       }
 
@@ -67,6 +70,7 @@ export default class App extends Component {
       intro,
       misEstudios,
       misHabilidades,
+      misProyectos,
     } = this.state.user;
 
 
@@ -90,6 +94,10 @@ export default class App extends Component {
         <HabilityContainer
           habilidades={misHabilidades} logoHabilidad={logoHabilidad}
         />
+        <ProjectsContainer
+        proyectos = {misProyectos} logoTrabajo={logoTrabajo}
+        />
+
       </div>
     );
   }
