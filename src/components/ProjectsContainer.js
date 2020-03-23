@@ -8,8 +8,8 @@ export default class ProjectsContainer extends Component {
         return (
             <div className=" mt-12 ">
             <div className="flex items-center justify-center rounded-lg">
-                <img className="h-24 object-cover px-2 " src={logoTrabajo} alt=""/>
-                <h1 className=" text-5xl font-medium font-mono px-3">Proyectos</h1>
+                <img className="h-20 md:h-24 object-cover  " src={logoTrabajo} alt=""/>
+                <h1 className="md:text-5xl text-3xl font-medium font-mono px-3">Proyectos</h1>
             </div>
             {proyectos.map(proyecto => <Project info={proyecto} key={proyecto.nombre} />)}
         </div>

@@ -10,8 +10,8 @@ export default class Effects extends Component {
     render() {
 
         return (
-            <div className='fixed bottom-0 right-0 mr-3 '>
-               <button className='bg-black hover:bg-blue-700 text-white font-bold text-5xl p-1 rounded-full' 
+            <div className='fixed bottom-0 right-0'>
+               <button className='bg-black hover:bg-blue-700 text-white font-bold text-5xl rounded-full' 
                onClick={this.onClickUp}> 
                <GoArrowUp/>
                </button>

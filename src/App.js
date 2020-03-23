@@ -26,6 +26,7 @@ export default class App extends Component {
         misEstudios: [],
         misHabilidades: [],
         misProyectos: [],
+        informacion:{},
       }
     }
     // pasame una referencia al child user de la database de firebaseApp
@@ -49,6 +50,7 @@ export default class App extends Component {
         misEstudios: snap.val().misEstudios,
         misHabilidades: snap.val().misHabilidades,
         misProyectos: snap.val().misProyectos,
+        informacion: snap.val().informacion,
         _key: snap.key
       }
 
@@ -75,6 +77,7 @@ export default class App extends Component {
       misEstudios,
       misHabilidades,
       misProyectos,
+      informacion,
     } = this.state.user;
 
 

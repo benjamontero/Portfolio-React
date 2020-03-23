@@ -36,13 +36,13 @@ export default class Ability extends Component {
 
 
         return (
-            <div className="w-32 md:w-auto md:h-auto shadow-2xl border rounded-lg">
+            <div className="md:w-auto md:h-auto shadow-2xl border rounded-lg p-2 items-center">
                 <div className="flex items-center object-cover flex-col">
                     <img className="object-cover h-20 md:h-32 lg:h-40 " src={foto} alt="" />
-                    <div className="" >
+                 
                         <h1 className="text-center">{nombre}</h1>
-                        <div className='text-green-700 text-2xl'>{levelxp}</div>
-                    </div>
+                        <div className='text-green-700 text-xl'>{levelxp}</div>
+      
                 </div>
             </div>
         );
