@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import {animateScroll as scroll} from '../../node_modules/react-scroll'
-import { Element } from 'react-scroll';
+import {animateScroll as scroll} from '../../node_modules/react-scroll';
 
 export default class Presentation extends Component {
     scrollEducacion = () =>{
@@ -9,7 +8,12 @@ export default class Presentation extends Component {
     scrollHabilidad = () =>{
         scroll.scrollTo(1600);
     }
-
+    scrolltrabajo = () =>{
+        scroll.scrollTo(2300);
+    }
+    onClickDown = () => {
+        scroll.scrollToBottom();
+     }
 
     render() {
         const { name, roll, logoEducacion, logoHabilidad, logoTrabajo, logoInformacion } = this.props;
@@ -27,9 +31,9 @@ export default class Presentation extends Component {
                         <div className="rounded-md md:w-40 md:h-40 w-20 h-20 bg-yellow-600 hover:bg-yellow-500 border-4 shadow-2xl">
                             <button onClick={this.scrollHabilidad}><img src={logoHabilidad} /></button></div>
                         <div className="rounded-md md:w-40 md:h-40 w-20 h-20 bg-blue-600 hover:bg-blue-500 border-4 shadow-2xl">
-                            <a href=""><img src={logoTrabajo} /></a></div>
+                            <button onClick={this.scrolltrabajo}><img src={logoTrabajo} /></button></div>
                         <div className="rounded-md md:w-40 md:h-40 w-20 h-20 bg-red-600 hover:bg-red-500 border-4 shadow-2xl">
-                            <a href=""><img src={logoInformacion} /></a></div>
+                        <button onClick={this.onClickDown}><img src={logoInformacion} /></button></div>
                     </div>
                 </div>
             </div>

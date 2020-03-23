@@ -4,7 +4,7 @@ import Project from './Project' ;
 export default class ProjectsContainer extends Component {
     render() {
         const {proyectos, logoTrabajo} = this.props;
-
+  
         return (
             <div className=" mt-12 ">
             <div className="flex items-center justify-center rounded-lg">
