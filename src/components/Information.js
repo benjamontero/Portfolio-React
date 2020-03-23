@@ -8,7 +8,7 @@ export default class Information extends Component {
             <div className= 'mt-12 font-medium font-mono'>
                 <div className="flex items-center justify-center rounded-lg">
                     <img className=" h-20 md:h-24 object-cover " src={logoInformacion}/>
-                    <h1 className="md:text-5xl text-3xl font-medium font-mono px-3">Educacion</h1>
+                    <h1 className="md:text-5xl text-3xl font-medium font-mono px-3">Informacion</h1>
                 </div>
                 <div class="bg-white sm:max-w-full max-w-md rounded overflow-hidden shadow-lg">
                     <div class="text-center p-4  border-b">
