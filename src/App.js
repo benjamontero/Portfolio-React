@@ -84,7 +84,7 @@ export default class App extends Component {
 
 
     return (
-      <div className="">
+      <div className=" lg:w-2/3 mx-auto">
         <Effects />
         <Presentation
           name={name}
